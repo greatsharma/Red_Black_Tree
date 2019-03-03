@@ -1,6 +1,6 @@
 /*
 	Name: RED BLACK TREE
-	Copyright: greatSharma
+	Copyright: greatsharma
 	Author: Gaurav Sharma
 	Date: 02-03-19 15:45
 	Description: This project consists of creation of a red-black tree under c++03 standards with documentary
