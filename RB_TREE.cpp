@@ -362,7 +362,7 @@ void RBT::delete_fixup(Node *x)
                 /*
                 case 2 :- w and both it's children are BLACK.
                 solution :- take BLACK from both x and w.
-                conclusion :- terminates
+                conclusion :- terminates if came from case 1
                 */
 
                 w->color = RED;
@@ -386,6 +386,7 @@ void RBT::delete_fixup(Node *x)
                 case 4 :- w is BLACK and w->right is RED
                 conclusion :- terminates
                */
+                
                 w->color = x->parent->color;
                 x->parent->color = BLACK;
                 w->right->color = BLACK;
@@ -408,13 +409,13 @@ void RBT::delete_fixup(Node *x)
 
             if (w->right->color == BLACK && w->left->color == BLACK)
             {
-                //case 2 :- w is BLACK and also it's both childs
+                //case 2 
                 w->color = RED;
                 x = x->parent;
             }
             else if (w->left->color == BLACK)
             {
-                //case 3 :- w=BLACK , w.l=RED and w.r=BLACK
+                //case 3 
                 w->right->color = BLACK;
                 w->color = RED;
                 left_rotate(w);
@@ -422,7 +423,7 @@ void RBT::delete_fixup(Node *x)
             }
             else
             {
-                //case 4 :- w is BLACK and w->r is RED
+                //case 4 
                 w->color = x->parent->color;
                 x->parent->color = BLACK;
                 w->left->color = BLACK;
