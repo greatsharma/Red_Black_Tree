@@ -282,7 +282,7 @@ void RBT::delete_node(int data)
             y = successor(z);
         }
 
-        if (z->left != RBT::NIL)
+        if (y->left != RBT::NIL)
             x = y->left;
         else
             x = y->right;
