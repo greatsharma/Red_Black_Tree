@@ -178,10 +178,7 @@ void RBT::insert_fixup(Node *z)
                 solution :- make z's parent BLACK and z's grandparent
                             RED and then right-rotate about z's grandp.
                             about z.
-                conclusion :- this case will never let the loop to
-                              terminate as now z and it's parent are
-                              RED violating prop 4. This case always
-                              take us to case 3.
+                conclusion  :- this case terminates
                 */
 
                 z->parent->color = BLACK;
@@ -315,7 +312,7 @@ void RBT::delete_node(int data)
             z->data = y->data;
 
         /*
-        Now this deletion is O(1) till now but
+        Now this deletion is O(lgn) till now but
         due to all this we may cause violation of 
         prop 1,2 and 4. To tackle this dent we call
         a sub-module delete_fixup which take O(lgn).
