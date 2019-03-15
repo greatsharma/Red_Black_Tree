@@ -174,14 +174,11 @@ void RBT::insert_fixup(Node *z)
             {
                 /*
                 case 3 :- when z's parent is RED but uncle is BLACK
-                          and z is it's parent's left child.
+                          and z is it's parent's right child.
                 solution :- make z's parent BLACK and z's grandparent
                             RED and then right-rotate about z's grandp.
                             about z.
-                conclusion :- this case will never let the loop to
-                              terminate as now z and it's parent are
-                              RED violating prop 4. This case always
-                              take us to case 3.
+                conclusion :- this case will terminate
                 */
 
                 z->parent->color = BLACK;
