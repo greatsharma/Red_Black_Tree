@@ -23,20 +23,20 @@ private:
   int _height;
 
   //atomic modules
-  Node *get_root_by_address();
+  Node *get_root_by_address() const;
   void left_rotate(Node *);
   void right_rotate(Node *);
-  Node *successor(Node *);
-  Node *find_node(int);
+  Node *successor(Node *) const;
+  Node *find_node(int) const;
 
 public:
   //constructor
   RBT();
 
   //getter modules
-  string get_node_prop(int);
+  string get_node_prop(int) const;
   string get_tree_prop();
-  int height_tree(const Node *);
+  int height_tree(const Node *) const;
   void no_of_leaves(const Node *);
   void no_of_internal_nodes(const Node *);
 
@@ -47,8 +47,8 @@ public:
   void delete_fixup(Node *);
 
   //application module
-  bool search(int);
-  void show_tree(int);
+  bool search(int) const;
+  void show_tree(int) const;
   void show_full_horizontal(const Node *, int space = 0) const;
   void show_preorder(const Node *) const;
   void show_inorder(const Node *) const;
