@@ -27,7 +27,7 @@ private:
 
 public:
   Node(int, int, Node *left = 0, Node *right = 0, Node *parent = 0);
-  string getProps();
+  string getProps() const;
   ~Node();
 };
 
