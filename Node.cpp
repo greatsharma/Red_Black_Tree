@@ -3,7 +3,7 @@
 Node::Node(int data, int color = RED, Node *left, Node *right, Node *parent)
     : data(data), color(color), left(left), right(right), parent(parent) {}
 
-string Node::getProps()
+string Node::getProps() const
 {
     /*
     DESCR -> returns all the properties of a invoked node.
