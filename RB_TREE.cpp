@@ -15,12 +15,12 @@ RBT::RBT()
     cout << "\n\nTREE CREATED :)";
 }
 
-Node *RBT::get_root_by_address()
+Node *RBT::get_root_by_address() const
 {
     return root;
 }
 
-string RBT::get_node_prop(int data)
+string RBT::get_node_prop(int data) const
 {
     Node *node = find_node(data);
     return node->getProps();
@@ -221,7 +221,7 @@ void RBT::insert_fixup(Node *z)
     return;
 }
 
-Node *RBT::find_node(int find)
+Node *RBT::find_node(int find) const
 {
     /*
     Submodule to return pointer to the first node
@@ -243,7 +243,7 @@ Node *RBT::find_node(int find)
     return temp;
 }
 
-Node *RBT::successor(Node *z)
+Node *RBT::successor(Node *z) const
 {
     // Analysis :- O(lgx)  x are the nodes below z
 
@@ -447,7 +447,7 @@ string RBT::get_tree_prop()
            "\nheight : " + to_string(_height);
 }
 
-int RBT::height_tree(const Node *curr_ptr)
+int RBT::height_tree(const Node *curr_ptr) const
 {
     // Analysis :- O(n)
 
@@ -495,12 +495,12 @@ void RBT::no_of_internal_nodes(const Node *curr_ptr)
     return;
 }
 
-bool RBT::search(int find)
+bool RBT::search(int find) const
 {
     return find_node(find) != RBT::NIL;
 }
 
-void RBT::show_tree(int type)
+void RBT::show_tree(int type) const
 {
     show s = static_cast<show>(type);
 
