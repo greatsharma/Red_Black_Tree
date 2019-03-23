@@ -1,7 +1,7 @@
-#ifndef __RB_TREE__
-#define __RB_TREE__
+#ifndef RB_TREE_HPP
+#define RB_TREE_HPP
 
-#include "Node.h"
+#include "Node.hpp"
 
 // This is just for display purpose
 enum show
