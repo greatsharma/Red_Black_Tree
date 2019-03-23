@@ -1,5 +1,5 @@
-#ifndef __NODE__
-#define __NODE__
+#ifndef NODE_HPP
+#define NODE_HPP
 
 #define RED 1
 #define BLACK 0
