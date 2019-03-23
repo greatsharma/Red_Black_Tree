@@ -1,8 +1,8 @@
-#ifndef __MENU__
-#define __MENU__
+#ifndef MENU_HPP
+#define MENU_HPP
 
 #include <iostream>
-#include "RB_TREE.h"
+#include "RB_Tree.hpp"
 
 using std::cin;
 using std::cout;
