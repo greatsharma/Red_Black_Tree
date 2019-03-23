@@ -1,4 +1,4 @@
-#include "Node.h"
+#include "Node.hpp"
 
 Node::Node(int data, int color = RED, Node *left, Node *right, Node *parent)
     : data(data), color(color), left(left), right(right), parent(parent) {}
